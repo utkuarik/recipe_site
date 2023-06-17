@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,500,600&display=swap">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipe Sharing Website</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <h1>Recipe Sharing Website</h1>
+    </div>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Recipes</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="search-bar">
+          <input type="text" placeholder="Search...">
+          <button type="button">Search</button>
+        </div>
+      </nav>
+
+  </header>
+
+  <div class="container">
+    <h2>Featured Recipes</h2>
+    <div class="featured-recipes" id="featuredRecipes">
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="recipe-details" id="recipeDetails">
+      <h2>Recipe Title</h2>
+      <img src="" alt="Recipe Image" id="recipeImage">
+      <h3>Ingredients</h3>
+      <ul id="recipeIngredients"></ul>
+      <h3>Instructions</h3>
+      <p id="recipeInstructions"></p>
+      <div id="recipeRating">
+        <input type="radio" name="rating" value="1"> 1
+        <input type="radio" name="rating" value="2"> 2
+        <input type="radio" name="rating" value="3"> 3
+        <input type="radio" name="rating" value="4"> 4
+        <input type="radio" name="rating" value="5"> 5
+        <button onclick="submitRating()">Submit Rating</button>
+      </div>
+      <div class="comments" id="comments">
+        <h3>Comments</h3>
+        <form onsubmit="submitComment(event)">
+          <input type="text" id="commentInput" placeholder="Add a comment">
+          <button type="submit">Submit</button>
+        </form>
+        <div id="commentList"></div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2023 Recipe Sharing Website. All rights reserved.
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
